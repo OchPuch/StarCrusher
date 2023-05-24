@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_ForceMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 970071251237182432, guid: c04788658b6f975459c76f9db9323119, type: 3}
+      propertyPath: speedLimit
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1320368694135280390, guid: c04788658b6f975459c76f9db9323119, type: 3}
       propertyPath: m_ForceMagnitude
       value: -150
@@ -306,6 +310,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 7866728006994530240}
-  kp: 20
-  ki: 10
-  kd: 10
+  kp: 30
+  ki: 15
+  kd: 15

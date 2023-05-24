@@ -310,13 +310,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temperature: 50
-  temperatureLimit: 10000
+  temperatureLimit: 8000
   temperatureAbility: 1500
   Rb: {fileID: 669531217}
-  type: 1
   bigAbilityCooldown: 5
   mediumAbilityCooldown: 5
   kp: 0.01
   ki: 0.001
   kd: 0.001
   abilityCount: 3
+  abilityCountDown: 4
+  abilityCost: 300

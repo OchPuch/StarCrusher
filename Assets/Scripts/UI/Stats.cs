@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
+using Temperature;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -28,6 +30,8 @@ public class Stats : MonoBehaviour
         var temp = Math.Ceiling(_player.GetTemperature());
         var sped = Math.Ceiling(Vector3.Magnitude(_playerRb.velocity));
         var spen = Math.Ceiling(Math.Abs(_playerRb.angularVelocity));
+        var ricochetTimer = _player.GetAbilityTimer();
+        
 
         //чем ближе сумма temp sped spen к 7030 тем больше становится offset в Glow материала текста
         var offset = ((temp + sped + spen) / 7030);
@@ -71,6 +75,12 @@ public class Stats : MonoBehaviour
                 }
 
                 break;
+            case StatType.RicochetTimer:
+                //Show with tolerance of 0.01 with always 2 decimal places
+                _text.text =  ricochetTimer.ToString("0.00", CultureInfo.InvariantCulture);
+                break;
+            
+                
         }
     }
 
@@ -79,6 +89,7 @@ public class Stats : MonoBehaviour
     {
         Speed,
         Temperature,
-        Spin
+        Spin,
+        RicochetTimer
     }
 }

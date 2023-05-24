@@ -17,7 +17,7 @@ public class GrabScript : MonoBehaviour
 
     private void Update()
     {
-        bool grabbedObjectExist = grabbedObject != null;
+        bool grabbedObjectExist = grabbedObject;
         
         
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isGrabbing)
@@ -33,6 +33,7 @@ public class GrabScript : MonoBehaviour
             if (grabbedObjectExist)
             {
                 grabbedObject = null;
+                grabbedObjectExist = false;
                 isGrabbing = false;
             }
         }

@@ -65,7 +65,7 @@ namespace Temperature
                 
             if (DifAngularSpeed < 0)
             {
-                temperature += Math.Abs(DifAngularSpeed / 4) * Time.deltaTime;
+                temperature += Math.Abs(DifAngularSpeed / 8) * Time.deltaTime;
             }
             
             if (Input.GetKeyDown(KeyCode.Space))
